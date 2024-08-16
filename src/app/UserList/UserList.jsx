@@ -45,42 +45,44 @@ const List = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4">Liste des Utilisateurs</h1>
-            <input
-                type="text"
-                placeholder="Rechercher..."
-                value={searchTerm}
-                onChange={handleSearch}
-                className="mb-4 p-2 border border-gray-300 rounded w-full"
-            />
-            <table className="min-w-full bg-white border border-gray-300">
+            <h1 className="text-2xl font-bold mb-4">Liste des utilisateurs</h1>
+            <div className="flex mb-4">
+                <input
+                    type="text"
+                    placeholder="Rechercher..."
+                    value={searchTerm}
+                    onChange={handleSearch}
+                    className="p-2 border border-gray-300 border-[#cad0d2] rounded w-1/3"
+                />
+            </div>
+            <table className="min-w-full bg-white border border-gray-300 border-[#cad0d2]">
                 <thead>
                     <tr className="bg-gray-100">
-                        <th className="border-b px-4 py-2 text-left">Nom</th>
-                        <th className="border-b px-4 py-2 text-left">Email</th>
-                        <th className="border-b px-4 py-2 text-left">Adresse</th>
-                        <th className="border-b px-4 py-2 text-left">Points</th>
+                        <th className="border-b border-[#cad0d2] px-4 py-2 text-left">Nom</th>
+                        <th className="border-b border-[#cad0d2] px-4 py-2 text-left">Email</th>
+                        <th className="border-b border-[#cad0d2] px-4 py-2 text-left">Adresse</th>
+                        <th className="border-b border-[#cad0d2] px-4 py-2 text-left">Points</th>
                     </tr>
                 </thead>
                 <tbody>
                     {currentUsers.map(user => (
                         <tr key={user.id} className="hover:bg-gray-50">
-                            <td className="border-b px-4 py-2 text-left">{user.name}</td>
-                            <td className="border-b px-4 py-2 text-left">{user.email}</td>
-                            <td className="border-b px-4 py-2 text-left">{user.address}</td>
-                            <td className="border-b px-4 py-2 text-left">{user.points}</td>
+                            <td className="border-b border-[#cad0d2] px-4 py-2 text-left">{user.name}</td>
+                            <td className="border-b border-[#cad0d2] px-4 py-2 text-left">{user.email}</td>
+                            <td className="border-b border-[#cad0d2] px-4 py-2 text-left">{user.address}</td>
+                            <td className="border-b border-[#cad0d2] px-4 py-2 text-left">{user.points}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
-            <div className="mt-4 flex justify-center">
+            <div className="mt-4 flex justify-end">
                 <nav>
-                    <ul className="flex list-style-none">
+                    <ul className="flex list-style-none ">
                         {Array.from({ length: Math.ceil(filteredUsers.length / usersPerPage) }, (_, i) => (
                             <li key={i + 1} className="mx-1">
                                 <button
                                     onClick={() => paginate(i + 1)}
-                                    className={`px-4 py-2 border rounded ${currentPage === i + 1 ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
+                                    className={`px-4 py-2 border border-[#cad0d2] rounded ${currentPage === i + 1 ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
                                 >
                                     {i + 1}
                                 </button>
