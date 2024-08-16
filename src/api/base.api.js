@@ -12,6 +12,7 @@ const getTokenFromCookie = () => {
 };
 
 export async function Login({ endpoint, body }) {
+  Cookies.set("token", null);
   try {
     const { data } = await axios.post(`${baseURL}${endpoint}`, body);
 

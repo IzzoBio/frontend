@@ -11,6 +11,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { login } from '../../services/authService';
 import Header from '../../components/Header';
 import * as userApi from '../../api/users';
+import CurrentUserInfo from '../../utils/token';
 
 const schema = yup.object().shape({
     email: yup.string().email('Veuillez entrer un mail valide').required('Veuillez spécifier un mail'),
@@ -23,7 +24,7 @@ const schema = yup.object().shape({
 const defaultValues = {
     email: '',
     password: '',
-    remember: true,
+    remember: true,         
 };
 
 function Login() {
@@ -38,10 +39,9 @@ function Login() {
 
     const onSubmit = ({email , password}) => {
         userApi.authUser({email, password}).then(() => {
-            navigate("/")
-        })
-        .catch((e) => {
-            if (e) {
+            if(CurrentUserInfo()) {
+                navigate("/")
+            } else {
                 border = "p-5 rounded bg-white border border-danger";
                 errorMessage = "Fail authentication";
                 setTimeout(() => {
@@ -50,7 +50,8 @@ function Login() {
                 }, 1500);
                 alert("Authentication failed");
             }
-        });
+        })
+        .catch((e) => console.log(e));
     }
 
 
