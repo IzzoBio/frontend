@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Sidebar = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="w-[300px] bg-green-700 p-6 border-r border-[white] flex flex-col justify-between">
             <div>
@@ -7,8 +11,8 @@ const Sidebar = () => {
                     <p className="text-center m-3">iZZoBio</p>
                 </div>
                 <ul>
-                    <li className="py-2 text-[white] font-bold cursor-pointer hover:text-[white] h-[50px]">Accueil</li>
-                    <li className="py-2 text-[white] cursor-pointer hover:text-[white] h-[50px]">Profile</li>
+                    <li className="py-2 text-[white] font-bold cursor-pointer hover:text-[white] h-[50px]" onClick={navigate("/home")}>Accueil</li>
+                    <li className="py-2 text-[white] cursor-pointer hover:text-[white] h-[50px]" onClick={navigate("/profile")}>Profile</li>
                     <li className="py-2 text-[white] cursor-pointer hover:bg-gray-200 hover:text-white h-[50px]">Enregistrement</li>
                     <li className="py-2 text-[white] cursor-pointer hover:bg-gray-200 hover:text-white h-[50px]">Calendrier</li>
                     <li className="py-2 text-[white] cursor-pointer hover:bg-gray-200 hover:text-white h-[50px]">Carte</li>

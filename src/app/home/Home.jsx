@@ -1,6 +1,5 @@
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import PostApp from "../post/post";
 import PostCard from "../post/PostCard";
 
 function Home() {
