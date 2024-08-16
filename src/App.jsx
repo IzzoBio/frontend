@@ -6,6 +6,8 @@ import axios from "axios"
 import { ThemeProvider } from "@emotion/react"
 import theme from "../theme"
 import Verify from "./app/auth/Verify"
+import ProfileApp from "./app/profile/Profile"
+
 
 axios.defaults.baseURL = process.env.BACK_API_URL;
 
@@ -20,6 +22,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/verify-account" element={<Verify />} />
+           /**just added */
+          <Route path="/profile" element={<ProfileApp />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
