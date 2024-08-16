@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+const menu = [{
+    
+}]
+
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -34,9 +38,9 @@ const Navbar = () => {
                         <FaBars size={30} className={isScrolled ? 'text-black' : 'text-white'} />
                     )}
                 </div>
-                <ul className={`flex flex-col md:flex-row absolute md:static left-0 top-20 w-full md:w-auto bg-black/90 md:bg-transparent text-center md:text-left transition-transform duration-300 ${click ? "translate-x-0" : "-translate-x-full"} md:transform-none`}>
+                <ul className={`flex flex-col md:flex-row absolute md:static left-0 top-20 w-full md:w-auto md:bg-transparent text-center md:text-left transition-transform duration-300 ${click ? "translate-x-0" : "-translate-x-full"} md:transform-none`}>
                     <li className="py-4 md:py-0 md:px-4 font-medium text-[white]">
-                        <a href="/" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Avantages</a>
+                        <a href="/" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600`}>Avantages</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium text-[white]">
                         <a href="#about" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Nos services</a>

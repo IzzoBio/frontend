@@ -12,6 +12,7 @@ import Footer from "./app/footerTest/footerTest"
 import List from "./app/UserList/UserList"
 import CalendarApp from "./app/Calendar/Calendar"
 import ResetPassword from "./app/auth/ResetPassword"
+import Home from "./app/home/Home"
 
 axios.defaults.baseURL = process.env.BACK_API_URL;
 
@@ -23,6 +24,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/verify-account" element={<Verify />} />
