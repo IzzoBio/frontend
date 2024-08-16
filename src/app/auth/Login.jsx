@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Divider } from '@mui/material';
 import { TypeAnimation } from 'react-type-animation';
-import { login } from '../../services/authService';
 import Header from '../../components/Header';
 import * as userApi from '../../api/users';
 import CurrentUserInfo from '../../utils/token';

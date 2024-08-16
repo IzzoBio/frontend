@@ -1,4 +1,4 @@
-import { Get, Post, Put, Delete } from "../baseApi";
+import { Get, Post, Put, Delete } from "./base.api";
 
 export async function addActivitie(activitie) {
   const apiParam = {
