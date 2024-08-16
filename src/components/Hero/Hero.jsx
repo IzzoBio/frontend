@@ -7,9 +7,9 @@ const Hero = () => {
     const navigate = useNavigate();
 
     const titles = [
-        { h1: 'Parce que l\'argent', h2: 'Ne vient pas avec des instructions' },
-        { h1: 'Gérez vos finances', h2: 'Avec nos experts' },
-        { h1: 'Investissez intelligemment', h2: 'Pour un avenir meilleur' }
+        { h1: 'Parce que chaque petit geste compte', h2: 'Chaque fois que vous utilisez une poubelle, vous contribuez à préserver notre environnement. C’est un petit geste qui a un grand impact !' },
+        { h1: 'Parce que les poubelles ne viennent pas avec des instructions', h2: 'Les poubelles ne sont pas seulement des réceptacles, ce sont des actes de responsabilité envers notre planète. Jetez avec soin, agissez avec conscience.' },
+        { h1: 'Parce que l’argent', h2: 'Chaque geste écoresponsable est un investissement dans notre avenir. Tri, réutilisation et recyclage : pas besoin de manuel d’instructions, juste de' }
     ];
 
     useEffect(() => {
