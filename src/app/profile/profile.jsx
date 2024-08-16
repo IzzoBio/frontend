@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import DashboardChart from "../../components/Dashboard/DashboardChart";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import CurrentUserInfo from "../../utils/token";
 import { useNavigate } from "react-router-dom";
+import CurrentUserInfo from "../../utils/token";
 
 const Profile = () => {
   const profile = CurrentUserInfo();
