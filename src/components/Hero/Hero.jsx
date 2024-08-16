@@ -29,7 +29,7 @@ const Hero = () => {
                 <p className="italic text-sm mt-4">Call us</p>
                 <p className="text-2xl">1-800-123-4567</p>
                 <button 
-                onClick={navigate("/login")}
+                onClick={() =>navigate("/login")}
                 className="mt-4 w-72 bg-green-500 h-[50px] border border-green-500 text-[white] hover:bg-green-600 hover:border-green-700">Se connecter</button>
             </div>
         </div>

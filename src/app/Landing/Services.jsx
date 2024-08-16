@@ -6,26 +6,32 @@ import { Typography } from "@mui/material";
 
 const data = [
     {
-        image: './1.jpg',
-        title: 'Iphone 5G Phone',
+        image: '/instru.jpg',
+        title: 'Champion des Astuces Pro',
+        description: 'Des actualités enrichies de conseils quotidiens pour le bien-être de l’environnement et de la vie, incluant des remèdes naturels et des astuces adaptées aux variations climatiques pour une meilleure harmonie avec notre planète.'
     },
     {
-        image: '/2.jpg',
-        title: 'Samsung 5G Phone',
+        image: '/calnedar.jpg',
+        title: 'Planificateur des Ramassages Efficaces',
+        description: 'Un outil intelligent optimisant la collecte des déchets en ajustant les itinéraires des camions selon les besoins communautaires et les contraintes environnementales, réduisant les émissions de carbone et améliorant la propreté des rues.'
     },
     {
-        image: '/3.jpg',
-        title: 'Intel 5G Phone',
+        image: '/appel.jpg',
+        title: 'Ramassage sur Demande',
+        description: 'Un service flexible permettant aux citoyens de demander la collecte de déchets à la demande, incluant encombrants, matériaux recyclables et déchets verts, pour une planification personnalisée et une gestion plus efficace des ressources.'
     },
     {
-        image: '/4.jpg',
-        title: 'Poco 5G Phone',
+        image: '/poubelle.jpg',
+        title: 'Renouvellement des Conteneurs de Déchets',
+        description: 'Un programme modernisant les conteneurs de déchets avec des matériaux durables et des designs ergonomiques pour faciliter le tri sélectif et encourager la participation des citoyens, construisant ainsi un avenir plus propre et respectueux de l"environnement.'
     },
     {
-        image: '/5.jpg',
-        title: 'Techno 5G Phone',
-    }
-]
+        image: '/money.jpg',
+        title: 'Avantages à Obtenir en Collectif',
+        description: 'En collaborant pour protéger l’environnement, nous bénéficions d’économies d’échelle, d’une sensibilisation accrue et d’une meilleure efficacité dans les solutions durables, renforçant ainsi notre capacité collective à préserver notre planète. '
+    },
+
+];
 
 function Services() {
     let sliderRef = useRef(null);
@@ -55,17 +61,17 @@ function Services() {
                 <Slider ref={slider => (sliderRef = slider)} {...settings}>
                     {
                         data.map((item, index) => (
-                            <div key={index} className='p-10 shadow-md w-[500px] mt-10'>
-                                <div>
-                                    <img src={item.image} className='w-[500px] h-[400px] object-contain block m-auto ' />
+                            <div key={index} className='p-5 shadow-md w-[300px] h-auto mt-10'>
+                                <div className="flex justify-center">
+                                    <img src={item.image} className='w-full h-[200px] object-cover' />
                                 </div>
 
-                                <div className='p-6 bg-blue-600'>
-                                    <p className='font-semibold text-white text-center'>{item.title}</p>
+                                <div className='p-3 bg-blue-600 flex flex-col justify-center h-full'>
+                                    <p className='font-semibold text-[black] text-center mb-2'>{item.title}</p>
+                                    <p className='font-medium text-[black] text-center'>{item.description}</p>
                                 </div>
                             </div>
-                        )
-                        )
+                        ))
                     }
                 </Slider>
             </div>
