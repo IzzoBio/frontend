@@ -40,7 +40,7 @@ const Navbar = () => {
                 </div>
                 <ul className={`flex flex-col md:flex-row absolute md:static left-0 top-20 w-full md:w-auto transition-transform duration-300 ${click ? "translate-x-0" : "-translate-x-full"} md:transform-none`}>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="/" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Home</a>
+                        <a href="/home" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Home</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
                         <a href="#about" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>About</a>
