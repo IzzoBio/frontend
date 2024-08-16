@@ -5,6 +5,10 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../components/Hero/Hero';
+import Advantage from './Advantage';
+import Services from './Services';
+import Partner from './Partner';
+import NewsLetter from './NewsLetter';
 
 const style = {
   position: 'absolute',
@@ -23,7 +27,11 @@ export default function Landing() {
   return (
     <div>
         <Navbar />
-        <Hero/>
+        <Hero />
+        <Advantage />
+        <Services/>
+        <Partner />
+        <NewsLetter />
     </div>
   );
 }
