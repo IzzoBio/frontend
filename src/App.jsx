@@ -16,6 +16,7 @@ import Home from "./app/home/Home"
 import Favoris from "./app/Favoris/Favoris"
 import Admin from "./app/Admin/Post/Post"
 import DashboardChart from "./components/Dashboard/DashboardChart"
+import AdminDashboard from "./app/Admin/Post/AdminDashboard"
 
 axios.defaults.baseURL = process.env.BACK_API_URL;
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/favoris" element={<Favoris/>}/>
           <Route path="/admin" element={<Admin/>}/>
           <Route path="/dashboard" element={<DashboardChart/>}/>
+          <Route path="/admin/dashboard" element={<AdminDashboard />}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

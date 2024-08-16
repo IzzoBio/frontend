@@ -57,7 +57,7 @@ const List = () => {
             </div>
             <table className="min-w-full bg-white border border-gray-300 border-[#cad0d2]">
                 <thead>
-                    <tr className="bg-gray-100">
+                    <tr className="bg-gray-100 ">
                         <th className="border-b border-[#cad0d2] px-4 py-2 text-left">Nom</th>
                         <th className="border-b border-[#cad0d2] px-4 py-2 text-left">Email</th>
                         <th className="border-b border-[#cad0d2] px-4 py-2 text-left">Adresse</th>
