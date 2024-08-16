@@ -40,7 +40,11 @@ function Login() {
     const onSubmit = ({email , password}) => {
         userApi.authUser({email, password}).then(() => {
             if(CurrentUserInfo()) {
-                navigate("/")
+                var role = CurrentUserInfo().role;
+                console.log(role);
+                if (role == "ADMIN")
+                    navigate("/admin")
+                else navigate("/home")
             } else {
                 border = "p-5 rounded bg-white border border-danger";
                 errorMessage = "Fail authentication";
