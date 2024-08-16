@@ -20,17 +20,17 @@ const Navbar = () => {
                     )}
                 </div>
                 <ul className={`flex flex-col md:flex-row absolute md:static left-0 top-20 w-full md:w-auto bg-black/90 md:bg-transparent text-center md:text-left transition-transform duration-300 ${click ? "translate-x-0" : "-translate-x-full"} md:transform-none`}>
-                    <li className="py-4 md:py-0 md:px-4 font-medium text-white">
-                        <a href="/" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Home</a>
+                    <li className="py-4 md:py-0 md:px-4 font-medium text-[white]">
+                        <a href="/" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Avantages</a>
                     </li>
-                    <li className="py-4 md:py-0 md:px-4 font-medium text-white">
-                        <a href="#about" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">About</a>
+                    <li className="py-4 md:py-0 md:px-4 font-medium text-[white]">
+                        <a href="#about" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Nos services</a>
                     </li>
-                    <li className="py-4 md:py-0 md:px-4 font-medium text-white">
-                        <a href="#testimonials" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Testimonials</a>
+                    <li className="py-4 md:py-0 md:px-4 font-medium text-[white]">
+                        <a href="#testimonials" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Partenaires</a>
                     </li>
-                    <li className="py-4 md:py-0 md:px-4 font-medium text-white">
-                        <a href="#demo" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Demo</a>
+                    <li className="py-4 md:py-0 md:px-4 font-medium text-[white]">
+                        <a href="#demo" onClick={closeMenu} className="hover:border-b-2 border-champagne-600">Suggestions</a>
                     </li>
                 </ul>
             </nav>
