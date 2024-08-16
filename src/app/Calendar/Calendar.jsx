@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const months = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+  "Lanvier", "Fevrier", "Mars", "Avril", "Mai", "Juin",
+  "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"
 ];
 
 const CalendarApp = () => {
@@ -49,20 +49,20 @@ const CalendarApp = () => {
           <i className="fas fa-chevron-right text-2xl cursor-pointer" onClick={() => setDate(new Date(date.getFullYear(), date.getMonth() + 1))}></i>
         </div>
         <div className="w-full grid grid-cols-7 text-gray-400 text-xs mt-4">
-          <div className="text-center">Sun</div>
-          <div className="text-center">Mon</div>
-          <div className="text-center">Tue</div>
-          <div className="text-center">Wed</div>
-          <div className="text-center">Thu</div>
-          <div className="text-center">Fri</div>
-          <div className="text-center">Sat</div>
+          <div className="text-center">Dim</div>
+          <div className="text-center">Lun</div>
+          <div className="text-center">Mar</div>
+          <div className="text-center">Mer</div>
+          <div className="text-center">Jeu</div>
+          <div className="text-center">Ven</div>
+          <div className="text-center">Sam</div>
         </div>
         <div className="w-full grid grid-cols-7 gap-1 mt-2">
           {renderCalendar()}
         </div>
       </div>
-      <button className="bg-purple-600 text-white py-2 px-6 text-lg rounded-lg mt-4 hover:bg-purple-500 focus:outline-none shadow">
-        Contact Agent
+      <button className="bg-purple-600 text-white py-2 px-6 text-lg rounded-lg mt-4 hover:bg-purple-500 focus:outline-none shadow ms-[150px] bg-champagne-500 hover:bg-champagne-700 text-[white]">
+        Contacter un agent
       </button>
     </div>
   );
