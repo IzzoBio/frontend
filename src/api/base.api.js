@@ -23,7 +23,7 @@ export async function Login({ endpoint, body }) {
   }
 }
 
-export async function LoginOAuth2({ endpoint }) {
+export async function Redirection({ endpoint }) {
   try {
     window.location.href = baseURL + endpoint;
   } catch (error) {
