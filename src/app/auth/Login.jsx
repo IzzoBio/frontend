@@ -111,7 +111,7 @@ function Login() {
                             </div>
 
                             <div className="text-sm">
-                                <a href="#" className="font-medium text-terracota-500 hover:text-terracota-600">
+                                <a href="/verify-account" className="font-medium text-terracota-500 hover:text-terracota-600">
                                     Mot de passe oublié ?
                                 </a>
                             </div>

@@ -19,7 +19,6 @@ const Hero = () => {
 
     return (
         <div className="relative bg-cover bg-center h-screen w-full" style={{ backgroundImage: `url(${heroImage})` }}>
-            <div className="absolute inset-0 bg-black/50"></div>
             <div className="relative z-10 h-full flex flex-col justify-center max-w-5xl mx-auto px-4 text-[white]">
                 <div className="overflow-hidden">
                     <h1 className="text-5xl font-bold sm:text-3xl animate-slideIn">{titles[index].h1}</h1>
