@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+const menu = [{
+    
+}]
+
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);

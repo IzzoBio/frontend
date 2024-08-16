@@ -1,19 +1,7 @@
 import React from "react";
+import Header from "../../components/Header/Header";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
-const Sidebar = () => {
-  return (
-    <div className="w-64 bg-gray-100 p-6 border-r border-gray-300">
-      <div className="text-2xl font-bold text-purple-600 mb-8">iZZoBio</div>
-      <ul>
-        <li className="py-2 text-purple-600 font-bold cursor-pointer">Profil</li>
-        <li className="py-2 text-gray-700 cursor-pointer">Enregistrement</li>
-        <li className="py-2 text-gray-700 cursor-pointer">Program</li>
-        <li className="py-2 text-gray-700 cursor-pointer">Cartes</li>
-        <li className="py-2 text-gray-700 cursor-pointer">Settings</li>
-      </ul>
-    </div>
-  );
-};
 
 const Profile = () => {
   return (
@@ -41,10 +29,7 @@ const ProfileApp = () => {
     <div className="flex min-h-screen">
       <Sidebar />
       <main className="flex-1 p-8">
-        <div className="flex justify-end mb-6">
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-md mr-4">Theme: dark</button>
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-md">Get In Touch</button>
-        </div>
+        <Header/>
         <Profile />
       </main>
     </div>

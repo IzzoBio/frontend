@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import heroImage from '../../assets/sachet.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
     const [index, setIndex] = useState(0);
+    const navigate = useNavigate();
 
     const titles = [
         { h1: 'Parce que l\'argent', h2: 'Ne vient pas avec des instructions' },
@@ -26,7 +28,9 @@ const Hero = () => {
                 </div>
                 <p className="italic text-sm mt-4">Call us</p>
                 <p className="text-2xl">1-800-123-4567</p>
-                <button className="mt-4 w-72 bg-green-500 h-[50px] border border-green-500 text-[white] hover:bg-green-600 hover:border-green-700">Se connecter</button>
+                <button 
+                onClick={navigate("/login")}
+                className="mt-4 w-72 bg-green-500 h-[50px] border border-green-500 text-[white] hover:bg-green-600 hover:border-green-700">Se connecter</button>
             </div>
         </div>
     );

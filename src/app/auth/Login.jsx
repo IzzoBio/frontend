@@ -35,7 +35,7 @@ function Login() {
 
     const onSubmit = ({email , password}) => {
         login(email, password).then(response => {
-            navigate("/")
+            navigate("/home")
         }).catch(error => console.log(error))
     }
 
