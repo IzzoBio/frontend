@@ -35,14 +35,27 @@ export default {
         500: '#878f84',
         600: '#6d736b',
         700: '#595e57'
-      } ,
+      },
       'light': {
         500: '#FFFFF',
         600: '#FFFFF'
+      },
+      'white': '#FFFFFF',
+      'black': '#000000'
+    },
+    extend: {
+      backdropBlur: {
+        'md': '10px',
+      },
+      backgroundColor: {
+        'black-90': 'rgba(0, 0, 0, 0.9)',
+        'white-90': 'rgba(255, 255, 255, 0.9)',
+      },
+      textColor: {
+        'black': '#000000',
+        'white': '#FFFFFF'
       }
     },
-    extend: {},
   },
   plugins: [],
 }
-
