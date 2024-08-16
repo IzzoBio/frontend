@@ -29,9 +29,9 @@ function App() {
           <Route path="/profile" element={<ProfileApp/>}/>
           <Route path="/post" element={<PostApp/>}/>
           <Route path="/foot" element={<Footer/>}/>
-          <Route path="/Calendar" element={<CalendarApp/>}/>
-          <Route path="/List" element={<List/>}/>
-          <Route path="/ResetPassword" element={<ResetPassword/>}/>
+          <Route path="/calendar" element={<CalendarApp/>}/>
+          <Route path="/list" element={<List/>}/>
+          <Route path="/reset-password" element={<ResetPassword/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
