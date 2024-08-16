@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import heroImage from '../../assets/sachet.jpg';
+import heroImage from '../../assets/pexels-kamil-3609723-5408840.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
@@ -26,8 +26,8 @@ const Hero = () => {
                     <h1 className="text-5xl font-bold sm:text-3xl animate-slideIn">{titles[index].h1}</h1>
                     <h2 className="text-2xl italic sm:text-lg animate-slideIn">{titles[index].h2}</h2>
                 </div>
-                <p className="italic text-sm mt-4">Call us</p>
-                <p className="text-2xl">1-800-123-4567</p>
+                <p className="italic text-sm mt-4">Contactez-nous</p>
+                <p className="text-2xl">+261 38 54 554 78</p>
                 <button 
                 onClick={()=>navigate("/login")}
                 className="mt-4 w-72 bg-green-500 h-[50px] border border-green-500 text-[white] hover:bg-green-600 hover:border-green-700">Se connecter</button>
