@@ -8,6 +8,7 @@ import theme from "../theme"
 import Verify from "./app/auth/Verify"
 import ProfileApp from "./app/profile/profile"
 import PostApp from "./app/post/post"
+import Footer from "./app/footerTest/footerTest"
 
 axios.defaults.baseURL = process.env.BACK_API_URL;
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/verify-account" element={<Verify />} />
           <Route path="/profile" element={<ProfileApp/>}/>
           <Route path="/post" element={<PostApp/>}/>
+          <Route path="/foot" element={<Footer/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
