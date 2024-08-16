@@ -1,4 +1,4 @@
-import { Get, Post, Login, Put, Patch, LoginOAuth2 } from "./base.api";
+import { Get, Post, Login, Put, Patch, Redirection } from "./base.api";
 
 export function authUser(userInfo) {
   const apiParam = {
@@ -13,7 +13,7 @@ export function auth2UserGoogle() {
     endpoint: "/api/auth/login/google",
     body: null
   }
-  return LoginOAuth2(apiParam);
+  return Redirection(apiParam);
 }
 
 export async function addUser(userInfo) {
@@ -38,6 +38,14 @@ export async function updateUser(name) {
     body: name
   }
   return Put(apiParam);
+}
+
+export async function verifyEmail(code) {
+  const apiParam = {
+    endpoint: "/api/users/verify-email?token=" + code,
+    body: null
+  }
+  return Redirection(apiParam);
 }
 
 export async function forgotPassword(email) {

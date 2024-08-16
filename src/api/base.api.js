@@ -12,10 +12,11 @@ const getTokenFromCookie = () => {
 };
 
 export async function Login({ endpoint, body }) {
+  Cookies.set("token", null);
   try {
     const { data } = await axios.post(`${baseURL}${endpoint}`, body);
 
-    setTokenInCookie(data);
+    setTokenInCookie(data.token);
 
     return data;
   } catch (error) {
@@ -23,15 +24,9 @@ export async function Login({ endpoint, body }) {
   }
 }
 
-export async function LoginOAuth2({ endpoint }) {
+export async function Redirection({ endpoint }) {
   try {
-    window.location.href = baseURL + "/api/auth/login/google";
-    
-    const { data } = await axios.post(`${baseURL}${endpoint}`);
-
-    setTokenInCookie(data);
-
-    return data;
+    window.location.href = baseURL + endpoint;
   } catch (error) {
     console.log(error);
   }

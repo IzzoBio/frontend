@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import { Controller, useForm } from 'react-hook-form';
 import TextField from '@mui/material/TextField';
@@ -9,7 +10,8 @@ import { Divider } from '@mui/material';
 import { TypeAnimation } from 'react-type-animation';
 import { login } from '../../services/authService';
 import Header from '../../components/Header';
-
+import * as userApi from '../../api/users';
+import CurrentUserInfo from '../../utils/token';
 
 const schema = yup.object().shape({
     email: yup.string().email('Veuillez entrer un mail valide').required('Veuillez spécifier un mail'),
@@ -22,7 +24,7 @@ const schema = yup.object().shape({
 const defaultValues = {
     email: '',
     password: '',
-    remember: true,
+    remember: true,         
 };
 
 function Login() {
@@ -32,12 +34,26 @@ function Login() {
         resolver: yupResolver(schema),
     });
     const navigate = useNavigate();
+    var border = "p-5 rounded bg-white border border-primary";
+    var errorMessage = "";
 
     const onSubmit = ({email , password}) => {
-        login(email, password).then(response => {
-            navigate("/home")
-        }).catch(error => console.log(error))
+        userApi.authUser({email, password}).then(() => {
+            if(CurrentUserInfo()) {
+                navigate("/")
+            } else {
+                border = "p-5 rounded bg-white border border-danger";
+                errorMessage = "Fail authentication";
+                setTimeout(() => {
+                    border = "p-5 rounded bg-white border border-primary";
+                    errorMessage = "";
+                }, 1500);
+                alert("Authentication failed");
+            }
+        })
+        .catch((e) => console.log(e));
     }
+
 
     return (
         <div className="min-h-full h-screen grid grid-cols-2 gap-3 w-[90%] justify-center items-center">
@@ -125,7 +141,7 @@ function Login() {
                     </form>
                     <Divider>ou continuer avec </Divider>
                     <div className='flex justify-center items-center'>
-                        <button className="w-[50px] h-[50px] mt-10 rounded-full border border-[#adadad] flex justify-center items-center hover:bg-[rgb(233,232,232)]">
+                        <button onClick={() => userApi.auth2UserGoogle()} className="w-[50px] h-[50px] mt-10 rounded-full border border-[#adadad] flex justify-center items-center hover:bg-[rgb(233,232,232)]">
                             <img src='./google.png' className='w-[20px]' />
                         </button>
                     </div>
