@@ -1,7 +1,8 @@
 import React from "react";
-import Sidebar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import DashboardChart from "../../components/Dashboard/DashboardChart";
+import Sidebar from "../../components/Sidebar/Sidebar";
+
 const Profile = () => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-md">
@@ -28,7 +29,7 @@ const ProfileApp = () => {
     <div className="flex min-h-screen">
       <Sidebar />
       <main className="flex-1 p-8">
-        <Header />
+        <Header/>
         <Profile />
         <DashboardChart/>
       </main>
