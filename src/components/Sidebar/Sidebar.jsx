@@ -53,7 +53,7 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </div>
-            <div className="text-center border-t border-[white]">
+            <div className="flex items-center justify-center text-center border-t border-[white]">
                 <button 
                     onClick={handleLogout} 
                     className="flex items-center justify-center text-sm text-[white] font-bold text-[16px] text-center mt-5 space-x-2"

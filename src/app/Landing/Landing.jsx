@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -9,6 +9,7 @@ import Advantage from './Advantage';
 import Services from './Services';
 import Partner from './Partner';
 import NewsLetter from './NewsLetter';
+import Footer from '../footerTest/footerTest';
 
 const style = {
   position: 'absolute',
@@ -23,15 +24,23 @@ const style = {
 };
 
 export default function Landing() {
-
   return (
     <div>
         <Navbar />
         <Hero />
-        <Advantage />
-        <Services/>
-        <Partner />
-        <NewsLetter />
+        <section id="advantages">
+          <Advantage />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="partner">
+          <Partner />
+        </section>
+        <section id="newsletter">
+          <NewsLetter />
+        </section>
+        <Footer />
     </div>
   );
 }

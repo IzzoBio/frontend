@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-const menu = [{
-    
-}]
-
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +22,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`fixed top-0 left-0 w-full h-20 z-50 transition-all duration-300 ${isScrolled ? 'bg-white-90 text-black' : 'bg-transparent text-white'}`}>
+        <div className={`fixed top-0 left-0 w-full h-20 z-50 transition-all duration-300 ${isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'}`}>
             <nav className="flex justify-between items-center h-full max-w-6xl mx-auto px-4">
                 <a href="/" className={`logo ${isScrolled ? 'text-black' : 'text-white'}`}>
                     <img src="./light.png" alt="logo" className="w-[50px] h-auto rounded-full" />
@@ -40,16 +36,16 @@ const Navbar = () => {
                 </div>
                 <ul className={`flex flex-col md:flex-row absolute md:static left-0 top-20 w-full md:w-auto transition-transform duration-300 ${click ? "translate-x-0" : "-translate-x-full"} md:transform-none`}>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="/home" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Home</a>
+                        <a href="#advantages" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Avantages</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="#about" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>About</a>
+                        <a href="#services" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Services</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="#testimonials" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Testimonials</a>
+                        <a href="#partner" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Partenaire</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="#demo" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Demo</a>
+                        <a href="#newsletter" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-white'}`}>Contactez-nous</a>
                     </li>
                 </ul>
             </nav>

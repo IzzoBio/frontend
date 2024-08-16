@@ -6,25 +6,10 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         {/* Section Newsletter */}
         <div className="text-center mb-8">
-          <h2 className="text-xl font-semibold mb-4">Subscribe to our newsletter</h2>
+          <h2 className="text-xl font-semibold mb-4">Inscrivez-vous pour plus d'actualités</h2>
           <div className="flex justify-center items-center space-x-4">
             <div className="relative">
-              <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                <svg
-                  className="w-5 h-5 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M2.94 6.52L10 11.48l7.06-4.96a2.5 2.5 0 00-2.12-.28L10 9.4 5.06 6.24a2.5 2.5 0 00-2.12.28z"></path>
-                  <path d="M2.5 8.67v5.83A2.5 2.5 0 005 16h10a2.5 2.5 0 002.5-2.5V8.67L10 13.1 2.5 8.67z"></path>
-                </svg>
-              </span>
-              <input
-                type="email"
-                placeholder="Input your email"
-                className="pl-10 pr-4 py-2 rounded-md bg-gray-800 text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
-              />
+              
             </div>
             <button className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-500">
               Subscribe
@@ -35,28 +20,22 @@ const Footer = () => {
         {/* Logo et Navigation */}
         <div className="w-full flex flex-col items-center border-t border-gray-700 pt-8">
           <div className="flex justify-between items-center w-full max-w-4xl">
-            <div className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-white">ConnectHub</div>
-            </div>
+          
             <ul className="flex space-x-6">
               <li className="hover:text-white cursor-pointer">Pricing</li>
-              <li className="hover:text-white cursor-pointer">About us</li>
-              <li className="hover:text-white cursor-pointer">Features</li>
-              <li className="hover:text-white cursor-pointer">Help Center</li>
-              <li className="hover:text-white cursor-pointer">Contact us</li>
+              <li className="hover:text-white cursor-pointer">A propos de nous</li>
+              <li className="hover:text-white cursor-pointer">Fonctionalité</li>
+              <li className="hover:text-white cursor-pointer">Centre d'aide</li>
+              <li className="hover:text-white cursor-pointer">Contactez nous</li>
               <li className="hover:text-white cursor-pointer">FAQs</li>
-              <li className="hover:text-white cursor-pointer">Careers</li>
+              <li className="hover:text-white cursor-pointer">Emploie</li>
             </ul>
           </div>
 
           {/* Sélection de langue */}
           <div className="flex justify-between items-center w-full max-w-4xl mt-8">
-            <select className="bg-gray-800 text-gray-300 p-2 rounded-md focus:outline-none">
-              <option>English</option>
-              <option>Français</option>
-              <option>Español</option>
-            </select>
-            <p className="text-gray-500">© 2022 Brand, Inc. • Privacy • Terms • Sitemap</p>
+            
+            <p className="text-gray-500">© 2024 Iza Ary Oh ?</p>
             {/* Réseaux sociaux */}
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white">
