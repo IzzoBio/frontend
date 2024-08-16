@@ -8,10 +8,9 @@ import CurrentUserInfo from "../../../utils/token";
 function Admin() {
   const nav = useNavigate();
   useEffect(() => {
-    if (CurrentUserInfo().role != "ADMIN") {
+    const role = CurrentUserInfo().role;
+    if (role != "ADMIN") {
       nav("/home");
-    } else if (CurrentUserInfo().role != "USER") {
-      nav("/");
     }
   }, []);
 
