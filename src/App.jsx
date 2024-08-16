@@ -20,6 +20,7 @@ import AdminDashboard from "./app/Admin/Post/AdminDashboard"
 import Map from "./components/Map/Map"
 
 function App() {
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
