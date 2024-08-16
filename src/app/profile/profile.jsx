@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import DashboardChart from "../../components/Dashboard/DashboardChart";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { useNavigate } from "react-router-dom";
 import CurrentUserInfo from "../../utils/token";
-
-const Profile = (props) => {
-  const { profiles } = props;
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-md m-5">
@@ -30,9 +28,12 @@ const Profile = (props) => {
 };
 
 const ProfileApp = () => {
+  const nav = useNavigate();
   useEffect(() => {
-    console.log(CurrentUserInfo());
-  })
+    if (CurrentUserInfo().role != "USER" || CurrentUserInfo().role != "ADMIN") {
+      nav("/");
+    }
+  }, []);
 
   return (
     <div className="bg-[#f1f1f1] flex min-h-screen">

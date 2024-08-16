@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
-
 import { Controller, useForm } from 'react-hook-form';
 import TextField from '@mui/material/TextField';
 import { Link, useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
-import Box from '@mui/material/Box';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Divider } from '@mui/material';
 import { TypeAnimation } from 'react-type-animation';

@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Header from '../../components/Header/Header';
 import { TextField, Typography } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from 'react-router-dom';
+import CurrentUserInfo from '../../utils/token';
+import * as requestCuaApi from '../../api/requestcuas'
 
 const months = [
   "Lanvier", "Fevrier", "Mars", "Avril", "Mai", "Juin",
@@ -24,7 +26,14 @@ const defaultValues = {
 
 const CalendarApp = () => {
   const [date, setDate] = useState(new Date());
-  const [contact, setContact] = useState(false)
+  const [contact, setContact] = useState(false);
+
+  const nav = useNavigate();
+  useEffect(() => {
+    if (CurrentUserInfo().role != "USER" || CurrentUserInfo().role != "ADMIN") {
+      nav("/");
+    }
+  }, []);
 
   const { control, formState: { errors }, handleSubmit } = useForm({
     mode: "onChange",
@@ -32,8 +41,11 @@ const CalendarApp = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = ({ }) => {
-
+  const onSubmit = ({ type, description }) => {
+    requestCuaApi.addRequestCUA({ type, description }).then((data) => {
+      console.log(data);
+      
+    }).catch((error) => console.log(error));    
   }
 
   const renderCalendar = () => {
