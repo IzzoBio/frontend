@@ -14,6 +14,7 @@ import CalendarApp from "./app/Calendar/Calendar"
 import ResetPassword from "./app/auth/ResetPassword"
 import Home from "./app/home/Home"
 import Favoris from "./app/Favoris/Favoris"
+import Admin from "./app/Admin/Post/Post"
 
 axios.defaults.baseURL = process.env.BACK_API_URL;
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/list" element={<List/>}/>
           <Route path="/reset-password" element={<ResetPassword/>}/>
           <Route path="/favoris" element={<Favoris/>}/>
+          <Route path="/admin" element={<Admin/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
