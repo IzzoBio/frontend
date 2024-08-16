@@ -11,6 +11,7 @@ import PostApp from "./app/post/post"
 import Footer from "./app/footerTest/footerTest"
 import List from "./app/UserList/UserList"
 import CalendarApp from "./app/Calendar/Calendar"
+import ResetPassword from "./app/auth/ResetPassword"
 
 axios.defaults.baseURL = process.env.BACK_API_URL;
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/foot" element={<Footer/>}/>
           <Route path="/Calendar" element={<CalendarApp/>}/>
           <Route path="/List" element={<List/>}/>
+          <Route path="/ResetPassword" element={<ResetPassword/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
