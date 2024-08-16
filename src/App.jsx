@@ -9,8 +9,8 @@ import Verify from "./app/auth/Verify"
 import ProfileApp from "./app/profile/profile"
 import PostApp from "./app/post/post"
 import Footer from "./app/footerTest/footerTest"
-import Calendar from "./app/Calendar/Calendar"
 import List from "./app/UserList/UserList"
+import CalendarApp from "./app/Calendar/Calendar"
 
 axios.defaults.baseURL = process.env.BACK_API_URL;
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/profile" element={<ProfileApp/>}/>
           <Route path="/post" element={<PostApp/>}/>
           <Route path="/foot" element={<Footer/>}/>
-          <Route path="/Calendar" element={<Calendar/>}/>
+          <Route path="/Calendar" element={<CalendarApp/>}/>
           <Route path="/List" element={<List/>}/>
         </Routes>
       </BrowserRouter>
