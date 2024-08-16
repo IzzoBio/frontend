@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
+import DashboardChart from "../../components/Dashboard/DashboardChart";
 import Sidebar from "../../components/Sidebar/Sidebar";
-
 
 const Profile = () => {
   return (
@@ -31,6 +31,7 @@ const ProfileApp = () => {
       <main className="flex-1 p-8">
         <Header/>
         <Profile />
+        <DashboardChart/>
       </main>
     </div>
   );
