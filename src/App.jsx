@@ -17,11 +17,9 @@ import Favoris from "./app/Favoris/Favoris"
 import Admin from "./app/Admin/Post/Post"
 import DashboardChart from "./components/Dashboard/DashboardChart"
 import AdminDashboard from "./app/Admin/Post/AdminDashboard"
-
-axios.defaults.baseURL = process.env.BACK_API_URL;
+import Map from "./components/Map/Map"
 
 function App() {
-
 
   return (
     <ThemeProvider theme={theme}>
@@ -42,6 +40,7 @@ function App() {
           <Route path="/admin" element={<Admin/>}/>
           <Route path="/dashboard" element={<DashboardChart/>}/>
           <Route path="/admin/dashboard" element={<AdminDashboard />}/>
+          <Route path="/map" element={<Map />}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
     const [activeItem, setActiveItem] = useState('');
-    const navigate = useNavigate();
 
     const handleClick = (item) => {
         setActiveItem(item);

@@ -79,10 +79,10 @@ const Map = () => {
       {locations.map((location, index) => (
         <Marker
           key={index}
-          position={[location.lat, location.lon]}
+          position={[location?.lat, location?.lon]}
           icon={redTrashIcon}
         >
-          <Popup>{location.type}</Popup>
+          <Popup>{location?.type}</Popup>
         </Marker>
       ))}
       {/* <AddMarkerOnClick onLocationAdd={handleLocationAdd} /> */}

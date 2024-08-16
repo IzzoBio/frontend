@@ -7,8 +7,8 @@ import Box from '@mui/material/Box';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Divider } from '@mui/material';
 import { TypeAnimation } from 'react-type-animation';
-import { login } from '../../services/authService';
 import Header from '../../components/Header';
+import * as userapi from "../../api/users"
 
 
 const schema = yup.object().shape({
@@ -34,9 +34,10 @@ function Login() {
     const navigate = useNavigate();
 
     const onSubmit = ({email , password}) => {
-        login(email, password).then(response => {
-            navigate("/home")
-        }).catch(error => console.log(error))
+        userapi.authUser(email, password).then(() => {
+            console.log('mety');
+            navigate("/home");}
+        ).catch(error => console.log(error))
     }
 
     return (
