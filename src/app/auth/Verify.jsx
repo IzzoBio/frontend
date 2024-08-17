@@ -1,11 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "../../components/Header";
+import * as userApi from "../../api/users";
+import { useNavigate } from "react-router-dom";
 
 export default function Verify() {
-    const [otp, setOtp] = useState(Array(4).fill("")); // Array with 6 empty strings
+    const [otp, setOtp] = useState(Array(6).fill("")); // Array with 6 empty strings
     const inputRefs = useRef([]); // Array of refs for each input field
     const [code , setCode] = useState(0);
- 
+    const nav = useNavigate();
+
     const handleKeyDown = (e) => {
         if (
             !/^[0-9]{1}$/.test(e.key) &&
@@ -38,6 +41,7 @@ export default function Verify() {
                 ...prevOtp.slice(0, index),
                 target.value,
                 ...prevOtp.slice(index + 1),
+            // eslint-disable-next-line no-undef
             ], () => handleCheck());
             if (index < otp.length - 1) {
                 inputRefs.current[index + 1].focus();
@@ -62,6 +66,10 @@ export default function Verify() {
     useEffect(() => {
         if(otp.every(digit => digit !== "" )){
             setCode(otp.join(""));
+        }
+        if (code != 0) {
+            userApi.verifyEmail(code);
+            nav("/login")
         }
     }, [otp])
     

@@ -4,9 +4,11 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Input from '../../components/Input/Input';
-import { Divider } from '@mui/material';
+import { Divider, TextField } from '@mui/material';
 import { TypeAnimation } from 'react-type-animation';
 import Header from '../../components/Header';
+import { Controller, useForm } from 'react-hook-form';
+import * as userApi from '../../api/users';
 
 /**
  * Form Validation Schema
@@ -17,16 +19,34 @@ const schema = yup.object().shape({
     .string()
     .required('Veuillez spécifier votre mot de passe.')
     .min(4, 'Le mot de passe doit contenir au moins 4 charactères.'),
+  passwordConfirmation: yup
+    .string()
+    .required('Veuillez spécifier votre mot de passe.')
+    .min(4, 'Le mot de passe doit contenir au moins 4 charactères.'),
 });
 
 const defaultValues = {
+  name: '',
   email: '',
   password: '',
-  remember: true,
+  passwordConfirmation: '',
 };
 
 function Signup() {
+  const { control, formState: { errors }, handleSubmit } = useForm({
+      mode: "onChange",
+      defaultValues,
+      resolver: yupResolver(schema),
+  });
   const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    userApi.addUser(data).then((res) => {
+      navigate("/verify-account")
+    })
+    .catch((e) => console.log(e));
+}
+
 
   return (
     <div className="min-h-full h-screen grid grid-cols-2 gap-3 w-[90%] justify-center items-center">
@@ -48,13 +68,85 @@ function Signup() {
               Connectez-vous!
             </Link>
           </p>
-          <form className="mt-8 space-y-6 mb-10">
-            <Input label={"Email"} type={"email"} placeholder={"Entrez votre email"} />
-            <Input label={"Mot de passe"} type={"password"} placeholder={"Entrez votre mot de passe"} />
-            <Input label={"Confirmation de mot de passe"} type={"confirmPassword"} placeholder={"Confirmer le mot de passe"} />
+          <form className="mt-8 space-y-6 mb-10" onSubmit={handleSubmit(onSubmit)}>
+            <Controller
+              name="name"
+              placeholder="Entrez votre nom"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  className="mb-24"
+                  label="Name"
+                  type="name"
+                  error={!!errors.name}
+                  helperText={errors?.name?.message}
+                  variant="outlined"
+                  color="green"
+                  required
+                  fullWidth
+                />
+              )}
+            />
+            <Controller
+              name="email"
+              placeholder="Entrez votre email"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  className="mb-24"
+                  label="Email"
+                  type="email"
+                  error={!!errors.email}
+                  helperText={errors?.email?.message}
+                  variant="outlined"
+                  color="green"
+                  required
+                  fullWidth
+                />
+              )}
+            />
+            <Controller
+              name="password"
+              placeholder="Entrez votre password"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  className="mb-24"
+                  label="Password"
+                  type="password"
+                  error={!!errors.password}
+                  helperText={errors?.password?.message}
+                  variant="outlined"
+                  color="green"
+                  required
+                  fullWidth
+                />
+              )}
+            />
+            <Controller
+              name="passwordConfirmation"
+              placeholder="Confirmer votre mot de passe"
+              control={control}
+              render={({ field }) => (
+                <TextField
+                  {...field}
+                  className="mb-24"
+                  label="PasswordConfirmation"
+                  type="password"
+                  error={!!errors.passwordConfirmation}
+                  helperText={errors?.passwordConfirmation?.message}
+                  variant="outlined"
+                  color="green"
+                  required
+                  fullWidth
+                />
+              )}
+            />
             <button
               type='submit'
-              onClick={() => navigate("/verify-account")}
               className="group relative w-full h-[50px] text-[black] flex justify-center py-2 px-4 text-[17px] font-medium rounded-md bg-champagne-500 hover:bg-champagne-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-champagne-500 mt-10"
             >
               S'inscrire
