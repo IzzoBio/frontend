@@ -44,7 +44,7 @@ function Header() {
                         />
                     </div>
                     <div className="mt-24 ml-450 text-lg tracking-tight leading-6 text-[white]">
-                        sur notre solution sur les problèmes communautaire , environemental et humain
+                        Sur notre solution sur les problèmes communautaire , environemental et humain
                         </div>
                 </div>
             </Box>
