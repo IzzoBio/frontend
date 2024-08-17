@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -36,16 +36,16 @@ const Navbar = () => {
                 </div>
                 <ul className={`flex flex-col md:flex-row absolute md:static left-0 top-20 w-full md:w-auto transition-transform duration-300 ${click ? "translate-x-0" : "-translate-x-full"} md:transform-none`}>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="/home" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Avantages</a>
+                        <a href="#advantages" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Avantages</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="#about" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Services</a>
+                        <a href="#services" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Services</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="#testimonials" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Partenaire</a>
+                        <a href="#partner" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Partenaire</a>
                     </li>
                     <li className="py-4 md:py-0 md:px-4 font-medium">
-                        <a href="#demo" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Contactez-nous</a>
+                        <a href="#newsletter" onClick={closeMenu} className={`hover:border-b-2 border-champagne-600 ${isScrolled ? 'text-black' : 'text-black'}`}>Contactez-nous</a>
                     </li>
                 </ul>
             </nav>
