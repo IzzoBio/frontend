@@ -11,16 +11,7 @@ const List = () => {
 
     useEffect(() => {
         getAllUsers().then((response) => {
-            if (response.ok) {
-                const data = response.json();
-                if (data._embedded && Array.isArray(data._embedded.userResponseList)) {
-                    setUsers(data._embedded.userResponseList);
-                } else {
-                    console.error('Données reçues non valides:', data);
-                }
-            } else {
-                console.error('Erreur lors de la récupération des utilisateurs:', response.status);
-            }
+            setUsers(response._embedded.userResponseList);
         }).catch(error => {
             console.log(error);
         })
@@ -45,7 +36,7 @@ const List = () => {
             <SidebarAdmin/>
             <main className="flex-1">
                 <Header title={"Utilisateurs"}/>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center p-5">
                     <div className="container mx-auto">
                         <h1 className="text-2xl font-bold mb-4">Liste des Utilisateurs</h1>
                         <input

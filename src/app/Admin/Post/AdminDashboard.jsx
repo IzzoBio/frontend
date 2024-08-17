@@ -5,20 +5,20 @@ import List from "../../UserList/UserList";
 import DashboardChart from "../../../components/Dashboard/DashboardChart";
 import { useNavigate } from "react-router-dom";
 import CurrentUserInfo from "../../../utils/token";
+import SidebarAdmin from "../SidebarAdmin";
 
 const AdminDashboard = () => {
   const nav = useNavigate();
   useEffect(() => {
-    if (CurrentUserInfo().role != "ADMIN") {
+    const role = CurrentUserInfo().role;
+    if (role != "ADMIN") {
       nav("/home");
-    } else if (CurrentUserInfo().role != "USER") {
-      nav("/");
     }
   }, []);
 
   return (
     <div className="flex min-h-screen bg-[#f3f3f3]">
-      <Sidebar />
+      <SidebarAdmin />
       <main className="flex-1 p-8">
         <Header />
         <DashboardChart />

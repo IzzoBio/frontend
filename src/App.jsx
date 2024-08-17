@@ -7,7 +7,6 @@ import theme from "../theme"
 import Verify from "./app/auth/Verify"
 import ProfileApp from "./app/profile/profile"
 import PostApp from "./app/post/post"
-import List from "./app/UserList/UserList"
 import CalendarApp from "./app/Calendar/Calendar"
 import ResetPassword from "./app/auth/ResetPassword"
 import Home from "./app/home/Home"
@@ -16,6 +15,7 @@ import Admin from "./app/Admin/Post/Post"
 import DashboardChart from "./components/Dashboard/DashboardChart"
 import AdminDashboard from "./app/Admin/Post/AdminDashboard"
 import Map from "./components/Map/Map"
+import List from "../src/app/Admin/UserList/UserList"
 
 function App() {
 

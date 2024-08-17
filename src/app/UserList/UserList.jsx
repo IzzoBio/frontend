@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CurrentUserInfo from '../../utils/token';
 
-const List = () => {
+const UserList = () => {
     // const nav = useNavigate();
     // useEffect(() => {
     //     if (CurrentUserInfo().role != "ADMIN") {
@@ -106,4 +106,4 @@ const List = () => {
     );
 };
 
-export default List;
+export default UserList;

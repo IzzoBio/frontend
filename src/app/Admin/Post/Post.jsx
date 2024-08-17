@@ -4,6 +4,7 @@ import Sidebar from "../../../components/Sidebar/Sidebar";
 import PostCard from "../../post/PostCard";
 import { useEffect } from "react";
 import CurrentUserInfo from "../../../utils/token";
+import SidebarAdmin from "../SidebarAdmin";
 
 function Admin() {
   const nav = useNavigate();
@@ -16,7 +17,7 @@ function Admin() {
 
   return (
     <div className="flex min-h-screen bg-[#f3f3f3]">
-      <Sidebar />
+      <SidebarAdmin />
       <main className="flex-1 p-8">
         <Header />
         <div className="flex justify-center items-center">
