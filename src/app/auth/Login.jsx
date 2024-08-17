@@ -43,7 +43,7 @@ function Login() {
                 var role = CurrentUserInfo().role;
                 console.log(role);
                 if (role == "ADMIN")
-                    navigate("/admin")
+                    navigate("/admin/dashboard")
                 else navigate("/home")
             } else {
                 border = "p-5 rounded bg-white border border-danger";

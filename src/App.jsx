@@ -9,7 +9,7 @@ import Verify from "./app/auth/Verify";
 import ProfileApp from "./app/profile/profile";
 import PostApp from "./app/post/post";
 import Footer from "./app/footerTest/footerTest";
-import List from "./app/UserList/UserList";
+import List from "./app/Admin/UserList/UserList";
 import CalendarApp from "./app/Calendar/Calendar";
 import ResetPassword from "./app/auth/ResetPassword";
 import Home from "./app/home/Home";
@@ -32,7 +32,6 @@ function App() {
           <Route path="/verify-account" element={<Verify />} />
           <Route path="/profile" element={<ProfileApp />} />
           <Route path="/post" element={<PostApp />} />
-          <Route path="/foot" element={<Footer />} />
           <Route path="/calendar" element={<CalendarApp />} />
           <Route path="/list" element={<List />} />
           <Route path="/reset-password" element={<ResetPassword />} />
