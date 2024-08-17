@@ -29,17 +29,15 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/verify-account" element={<Verify />} />
-          <Route path="/profile" element={<ProfileApp/>}/>
-          <Route path="/post" element={<PostApp/>}/>
-          <Route path="/foot" element={<Footer/>}/>
-          <Route path="/calendar" element={<CalendarApp/>}/>
-          <Route path="/list" element={<List/>}/>
-          <Route path="/reset-password" element={<ResetPassword/>}/>
-          <Route path="/favoris" element={<Favoris/>}/>
-          <Route path="/admin" element={<Admin/>}/>
-          <Route path="/dashboard" element={<DashboardChart/>}/>
-          <Route path="/admin/dashboard" element={<AdminDashboard />}/>
-          <Route path="/map" element={<Map />}/>
+          <Route path="/profile" element={<ProfileApp />} />
+          <Route path="/post" element={<PostApp />} />
+          <Route path="/calendar" element={<CalendarApp />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/favoris" element={<Favoris />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/dashboard" element={<DashboardChart />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
