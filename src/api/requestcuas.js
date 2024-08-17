@@ -2,7 +2,7 @@ import { Get, Post, Put, Delete } from "./base.api";
 
 export async function addRequestCUA(requestCUA) {
   const apiParam = {
-    endpoint: "/api/requestrequestCUAs",
+    endpoint: "/api/requestCUAs",
     body: requestCUA
   }
   return Post(apiParam);

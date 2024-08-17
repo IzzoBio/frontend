@@ -41,10 +41,9 @@ const CalendarApp = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = ({ type, description }) => {
-    requestCuaApi.addRequestCUA({ type, description }).then((data) => {
-      console.log(data);
-      
+  const onSubmit = (data) => {
+    requestCuaApi.addRequestCUA(data).then((res) => {
+      console.log(res);           
     }).catch((error) => console.log(error));    
   }
 
