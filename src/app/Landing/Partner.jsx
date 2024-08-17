@@ -1,11 +1,11 @@
 import { Grid, Typography } from "@mui/material";
 
 const partners = [
-    "./1.jpg",
-    "./2.jpg",
-    "./1.jpg",
-    "./2.jpg",
-    "./1.jpg",
+    "./onu.jpg",
+    "./Logo-Axian.png",
+    "./cua.jpg",
+    "./telma.jpeg",
+    "./stellarix.png",
 ]
 
 function Partner() {
