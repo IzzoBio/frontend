@@ -69,7 +69,7 @@ function Signup() {
               Connectez-vous!
             </Link>
           </p>
-          <form className="mt-8 space-y-6 mb-10" onSubmit={handleSubmit(onSubmit)}>
+          <form className="mt-8 space-y-6 mb-10 p-5" onSubmit={handleSubmit(onSubmit)}>
             <Controller
               name="name"
               placeholder="Entrez votre nom"
