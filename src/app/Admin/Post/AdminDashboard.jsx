@@ -19,8 +19,8 @@ const AdminDashboard = () => {
   return (
     <div className="flex min-h-screen bg-[#f3f3f3]">
       <SidebarAdmin />
-      <main className="flex-1 p-8">
-        <Header />
+      <main className="flex-1">
+        <Header title={"Tableau de bord"}/>
         <DashboardChart />
         <List />
       </main>
