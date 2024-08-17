@@ -45,6 +45,9 @@ export async function Post({ endpoint, body }) {
       body: body,
     };
 
+    console.log(body);
+    
+
     const { data } = await axios.post(`${baseURL}${endpoint}`, body, config);
 
     return data;

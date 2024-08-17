@@ -18,8 +18,8 @@ const Profile = () => {
           className="rounded-full mr-6 w-24 h-24 object-cover"
         />
           <div>
-            <p className="mb-2"><strong className="mr-3">Nom :</strong> {profile.name}</p>
-            <p className="mb-2"><strong className="mr-3">Email :</strong> {profile.email}</p>
+            <p className="mb-2"><strong className="mr-3">Nom :</strong> {profile?.name}</p>
+            <p className="mb-2"><strong className="mr-3">Email :</strong> {profile?.email}</p>
             <p className="mb-2"><strong className="mr-3">Addresse:</strong> Analamahitsy Cité lgmnt 242</p>
             <p className="mb-2"><strong className="mr-3">Nombre de points :</strong> 1500</p>
           </div>

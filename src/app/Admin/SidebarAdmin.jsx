@@ -9,10 +9,6 @@ const SidebarAdmin = () => {
         setActiveItem(item);
     };
 
-    const handleLogout = () => {
-        navigate('/login'); 
-    };
-
     return (
         <div className="w-[300px] bg-green-700 p-6 border-r border-[white] flex flex-col justify-between h-[100vh]">
             <div>
@@ -43,7 +39,7 @@ const SidebarAdmin = () => {
             </div>
             <div className="text-center border-t border-[white]">
                 <button 
-                    onClick={handleLogout} 
+                    onClick={() => navigate("/")} 
                     className="flex items-center justify-center text-sm text-[white] font-bold text-[16px] text-center mt-5 space-x-2"
                 >
                     <img src="..\login.png" alt="Logout Icon" className="w-[20px] h-[20px]" />

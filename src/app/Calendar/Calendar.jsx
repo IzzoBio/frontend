@@ -43,8 +43,8 @@ const CalendarApp = () => {
 
   const onSubmit = (data) => {
     requestCuaApi.addRequestCUA(data).then((res) => {
-      console.log(res);           
-    }).catch((error) => console.log(error));    
+      console.log(res);
+    }).catch((error) => console.log(error));
   }
 
   const renderCalendar = () => {
@@ -58,19 +58,19 @@ const CalendarApp = () => {
     let days = [];
 
     for (let x = firstDayIndex; x > 0; x--) {
-      days.push(<div className="pl-[50px] prev-date p-2 m-1 rounded-lg" key={`prev-${x}`}>{prevLastDay - x + 1}</div>);
+      days.push(<div className=" prev-date p-2 m-1 rounded-lg" key={`prev-${x}`}>{prevLastDay - x + 1}</div>);
     }
 
     for (let i = 1; i <= lastDay; i++) {
       if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-        days.push(<div className="pl-[50px] today p-2 m-1 rounded-lg shadow bg-rose-600 text-[white]" key={`current-${i}`}>{i}</div>);
+        days.push(<div className=" today p-2 m-1 rounded-lg shadow bg-rose-600 text-[white]" key={`current-${i}`}>{i}</div>);
       } else {
-        days.push(<div className="p-2 m-1 rounded-lg hover:bg-gray-700 text-gray-300 pl-[50px]" key={`day-${i}`}>{i}</div>);
+        days.push(<div className="p-2 m-1 rounded-lg hover:bg-gray-700 text-gray-300 " key={`day-${i}`}>{i}</div>);
       }
     }
 
     for (let j = 1; j <= nextDays; j++) {
-      days.push(<div className="pl-[50px] next-date text-gray-400 p-2 m-1 rounded-lg" key={`next-${j}`}>{j}</div>);
+      days.push(<div className=" next-date text-gray-400 p-2 m-1 rounded-lg" key={`next-${j}`}>{j}</div>);
     }
 
     return days;
@@ -79,12 +79,12 @@ const CalendarApp = () => {
   return (
     <div className="flex min-h-screen bg-[#f3f3f3]">
       <Sidebar />
-      <main className="flex-1 p-8">
+      <main className="flex-1">
         <Header />
         <div className="flex w-[1000px]">
-          <div className="w-[1000px] bg-[white] rounded-[10px] h-[400px]">
-            <div className="w-[1000px] h-auto bg-gray-800 shadow-xl rounded-lg flex flex-col justify-between items-center p-4">
-              <div className="w-[1000px] h-12 flex justify-between items-center text-center">
+          <div className=" bg-[white] rounded-[10px] h-[400px] m-5">
+            <div className="h-auto bg-gray-800 shadow-xl rounded-lg flex flex-col justify-between items-center p-4">
+              <div className="h-12 flex justify-between items-center text-center">
                 <i className="fas fa-chevron-left text-2xl cursor-pointer" onClick={() => setDate(new Date(date.getFullYear(), date.getMonth() - 1))}></i>
                 <div className="text-center">
                   <h1 className="text-2xl font-semibold uppercase tracking-wider">{months[date.getMonth()]}</h1>
@@ -106,12 +106,12 @@ const CalendarApp = () => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col ml-10'>
+          <div className='flex flex-col ml-10 p-5'>
             <div className='shadow-md rounded-[10px] bg-[white] w-[500px] h-[100px]'>
-              <Typography className="italic sm:text-lg text-center" sx={{ fontSize: '20px', paddingTop: '20px' }}>Nous passerons le vendredi 16 Août pour le ramassage</Typography>
+              <Typography className="italic sm:text-lg text-center" sx={{ fontSize: '17px', paddingTop: '30px' }}>Nous passerons le vendredi 16 Août pour le ramassage</Typography>
             </div>
             <div className='shadow-md rounded-[10px] bg-[white] w-[500px] mt-5 h-[100px]'>
-              <Typography className="italic sm:text-lg text-center" sx={{ fontSize: '20px', paddingTop: '20px' }}>Pour tout reclamation , veuillez nous contacter</Typography>
+              <Typography className="italic sm:text-lg text-center" sx={{ fontSize: '17px', paddingTop: '30px' }}>Pour tout reclamation , veuillez nous contacter</Typography>
             </div>
             <button className="bg-purple-600 py-2 px-6 text-lg rounded-lg mt-4 h-[50px] focus:outline-none shadow  bg-cinnamon-500 hover:bg-cinnamon-600 text-[white]"
               onClick={() => setContact(true)}>
