@@ -10,7 +10,7 @@ export async function addActualitie(actualitie) {
 
 export async function getAllActualities() {
   const apiParam = {
-    endpoint: "/actualities",
+    endpoint: "/api/actualities",
     body: null
   }
   return Get(apiParam);

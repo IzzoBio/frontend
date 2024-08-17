@@ -8,7 +8,7 @@ const PostApp = (props) => {
 
   return (
     <div className="flex min-h-screen">
-      <main className="flex-1 p-8">
+      <main className="flex-1">
         <PostCard feeds={feeds}/>
       </main>
     </div>

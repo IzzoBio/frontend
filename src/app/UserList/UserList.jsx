@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import CurrentUserInfo from '../../utils/token';
 
 const List = () => {
-    const nav = useNavigate();
-    useEffect(() => {
-        if (CurrentUserInfo().role != "ADMIN") {
-            nav("/home");
-        } else if (CurrentUserInfo().role != "USER") {
-            nav("/");
-        }
-    }, []);
+    // const nav = useNavigate();
+    // useEffect(() => {
+    //     if (CurrentUserInfo().role != "ADMIN") {
+    //         nav("/home");
+    //     } else if (CurrentUserInfo().role != "USER") {
+    //         nav("/");
+    //     }
+    // }, []);
 
     const [searchTerm, setSearchTerm] = useState('');
     const [users, setUsers] = useState([]);

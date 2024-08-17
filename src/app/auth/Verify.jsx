@@ -65,14 +65,14 @@ export default function Verify() {
 
     useEffect(() => {
         if(otp.every(digit => digit !== "" )){
-            setCode(otp.join(""));
-        }
-        if (code != 0) {
-            userApi.verifyEmail(code);
-            nav("/login")
+            setCode(otp.join(""))
         }
     }, [otp])
-    
+
+    const onSubmit = () => {
+        userApi.verifyEmail(code);
+        nav("/login")
+    }    
     
     return (
         <div className="min-h-full h-screen grid grid-cols-2 gap-3 w-[90%] justify-center items-center">
@@ -106,6 +106,13 @@ export default function Verify() {
                                     />
                                 ))}
                             </form>
+                            <button
+                                type='submit'
+                                onClick={() => onSubmit()}
+                                className="group relative w-full h-[50px] text-[black] flex justify-center py-2 px-4 text-[17px] font-medium rounded-md bg-champagne-500 hover:bg-champagne-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-champagne-500 mt-10"
+                                >
+                                Verifier
+                            </button>
                         </div>
                     </section>
                 </div>

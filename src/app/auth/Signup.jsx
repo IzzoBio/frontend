@@ -42,6 +42,7 @@ function Signup() {
 
   const onSubmit = (data) => {
     userApi.addUser(data).then((res) => {
+      console.log(res);
       navigate("/verify-account")
     })
     .catch((e) => console.log(e));

@@ -2,13 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Login from "./app/auth/Login"
 import Signup from "./app/auth/Signup"
 import Landing from "./app/Landing/Landing"
-import axios from "axios"
 import { ThemeProvider } from "@emotion/react"
 import theme from "../theme"
 import Verify from "./app/auth/Verify"
 import ProfileApp from "./app/profile/profile"
 import PostApp from "./app/post/post"
-import Footer from "./app/footerTest/footerTest"
 import List from "./app/UserList/UserList"
 import CalendarApp from "./app/Calendar/Calendar"
 import ResetPassword from "./app/auth/ResetPassword"
@@ -37,6 +35,7 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/favoris" element={<Favoris />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/map" element={<Map />} />
           <Route path="/dashboard" element={<DashboardChart />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>

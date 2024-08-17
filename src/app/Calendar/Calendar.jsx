@@ -28,12 +28,12 @@ const CalendarApp = () => {
   const [date, setDate] = useState(new Date());
   const [contact, setContact] = useState(false);
 
-  const nav = useNavigate();
-  useEffect(() => {
-    if (CurrentUserInfo().role != "USER" || CurrentUserInfo().role != "ADMIN") {
-      nav("/");
-    }
-  }, []);
+  // const nav = useNavigate();
+  // useEffect(() => {
+  //   if (CurrentUserInfo().role != "USER" || CurrentUserInfo().role != "ADMIN") {
+  //     nav("/");
+  //   }
+  // }, []);
 
   const { control, formState: { errors }, handleSubmit } = useForm({
     mode: "onChange",

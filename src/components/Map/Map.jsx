@@ -11,9 +11,8 @@ import {
 import "leaflet/dist/leaflet.css";
 
 const redTrashIcon = new L.Icon({
-  iconUrl:
-    "https://img.icons8.com/?size=100&id=pu2MfAM7qtF0&format=png&color=000000",
-  iconSize: [25, 41],
+  iconUrl: "./trash.png",
+  iconSize: [40, 40], 
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
@@ -52,6 +51,7 @@ const Map = () => {
 
   useEffect(() => {
     trashApi.getAllTrashs().then((data) => {
+      console.log(data);
       setLocations(data);
     })
     .catch((error) => console.error("Error fetching locations:", error));

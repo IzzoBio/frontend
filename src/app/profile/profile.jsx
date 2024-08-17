@@ -29,12 +29,12 @@ const Profile = () => {
 };
 
 const ProfileApp = () => {
-  const nav = useNavigate();
-  useEffect(() => {
-    if (CurrentUserInfo().role != "USER" || CurrentUserInfo().role != "ADMIN") {
-      nav("/");
-    }
-  }, []);
+  // const nav = useNavigate();
+  // useEffect(() => {
+  //   if (CurrentUserInfo().role != "USER" || CurrentUserInfo().role != "ADMIN") {
+  //     nav("/");
+  //   }
+  // }, []);
 
   return (
     <div className="bg-[#f1f1f1] flex min-h-screen">

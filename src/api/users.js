@@ -45,7 +45,7 @@ export async function verifyEmail(code) {
     endpoint: "/api/users/verify-email?token=" + code,
     body: null
   }
-  return Redirection(apiParam);
+  return Get(apiParam);
 }
 
 export async function forgotPassword(email) {

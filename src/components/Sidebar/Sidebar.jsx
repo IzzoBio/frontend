@@ -22,33 +22,33 @@ const Sidebar = () => {
                 <ul>
                     <li 
                         className={`py-2 text-[white] cursor-pointer h-[50px] ${activeItem === 'Accueil' ? 'border-r-2 border-gray-200 font-bold' : 'hover:border-r-2 border-gray-200'}`}
-                        onClick={() => handleClick('Accueil')}
+                        // onClick={() => handleClick('Accueil')}
                     >
                         <Link to={"/home"}>Accueil</Link>
                     </li>
                     <li 
                         className={`py-2 text-[white] cursor-pointer h-[50px] ${activeItem === 'Profile' ? 'border-r-2 border-gray-200 font-bold' : 'hover:border-r-2 border-gray-200'}`}
-                        onClick={() => handleClick('Profile')}
+                        // onClick={() => handleClick('Profile')}
                     >
                         <Link to={"/profile"}>Profile</Link>
                     </li>
                     <li 
                         className={`py-2 text-[white] cursor-pointer h-[50px] ${activeItem === 'Enregistrement' ? 'bg-gray-200 text-white border-r-2 border-gray-200 font-bold' : 'hover:bg-gray-200 hover:text-white hover:border-r-2 border-gray-200'}`}
-                        onClick={() => handleClick('Enregistrement')}
+                        // onClick={() => handleClick('Enregistrement')}
                     >
                         <Link to={"/favoris"}>Enregistrement</Link>
                     </li>
                     <li 
                         className={`py-2 text-[white] cursor-pointer h-[50px] ${activeItem === 'Calendrier' ? 'bg-gray-200 text-white border-r-2 border-gray-200 font-bold' : 'hover:bg-gray-200 hover:text-white hover:border-r-2 border-gray-200'}`}
-                        onClick={() => handleClick('Calendrier')}
+                        // onClick={() => handleClick('Calendrier')}
                     >
                         <Link to={"/calendar"}>Calendrier</Link>
                     </li>
                     <li 
                         className={`py-2 text-[white] cursor-pointer h-[50px] ${activeItem === 'Carte' ? 'bg-gray-200 text-white border-r-2 border-gray-200 font-bold' : 'hover:bg-gray-200 hover:text-white hover:border-r-2 border-gray-200'}`}
-                        onClick={() => handleClick('Carte')}
+                        // onClick={() => handleClick('Carte')}
                     >
-                        Carte
+                        <Link to={"/map"}>Carte</Link>                        
                     </li>
                 </ul>
             </div>
