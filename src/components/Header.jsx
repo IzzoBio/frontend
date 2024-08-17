@@ -43,9 +43,9 @@ function Header() {
                             repeat={Infinity}
                         />
                     </div>
-                    <div className="mt-24 text-lg tracking-tight leading-6 text-[white]">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni aut quis facilis iste ab illum alias quasi doloribus nisi velit voluptates, libero tenetur? Minima possimus sit aspernatur necessitatibus provident.
-                    </div>
+                    <div className="mt-24 ml-450 text-lg tracking-tight leading-6 text-[white]">
+                        sur notre solution sur les problèmes communautaire , environemental et humain
+                        </div>
                 </div>
             </Box>
         </div>
